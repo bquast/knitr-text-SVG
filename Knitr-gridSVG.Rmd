@@ -1,0 +1,27 @@
+---
+title: "knitr gridSVG"
+author: "Bastiaan Quast"
+date: "28 September 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Base Plot
+
+```{r base-plot}
+hist(1:4, xaxt='n', yaxt='n', ann=FALSE)
+```
+
+# ggplot2
+
+```{r gridSVG, include=FALSE}
+library(gridSVG)
+```
+
+```{r ggplot2-plot, dev='gridsvg', fig.ext='svg'}
+library(ggplot2)
+qplot(1:4) + theme_classic()
+```
