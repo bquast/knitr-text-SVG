@@ -127,15 +127,14 @@ $(document).ready(function () {
 <div id="base-plot" class="section level1">
 <h1>Base Plot</h1>
 <pre class="r"><code>hist(1:4, xaxt=&#39;n&#39;, yaxt=&#39;n&#39;, ann=FALSE)</code></pre>
-<p><img src="Knitr-gridSVG_files/figure-html/base-plot-1.svg" /><!-- --></p>
+<p><img src="Knitr-gridSVG_files/figure-html/base-plot-1.png" /><!-- --></p>
 </div>
 <div id="ggplot2" class="section level1">
 <h1>ggplot2</h1>
 <pre class="r"><code># opts_chunk$set(dev = &#39;gridSVG::gridsvg&#39;)
 library(ggplot2)
-qplot(1:4) + theme_classic()</code></pre>
-<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-<p><img src="Knitr-gridSVG_files/figure-html/ggplot2-plot-1.svg" /><!-- --></p>
+qplot(Petal.Length, Petal.Width, data=iris, colour=Species)</code></pre>
+<p><img src="Knitr-gridSVG_files/figure-html/ggplot2-plot-1.png" /><!-- --></p>
 </div>
 
 
